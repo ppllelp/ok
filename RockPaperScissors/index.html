@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        table {  
+            width: 90%
+        }
+        table, th, td {           
+            padding: 10px;
+            text-align:  center;            
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-12 col-sm-6 col-lg">
+    <h1>Rock Paper Scissors</h1>    
+    <table >
+        <th colspan="3"> Game #1 </th>
+        <tr>
+            <td>User</td>
+            <td></td>
+            <td>Computer</td>
+        </tr>
+        <tr>
+            <td>
+                <img id="user_rockImg" src="images/rock.png" alt="urock" width="100px" onclick="selectedShape(this)">
+                <img id="user_paperImg" src="images/paper.png" alt="upaper" width="100px" onclick="selectedShape(this)">
+                <img id="user_scissorsImg" src="images/scissors.png" alt="uscissors" width="120px" onclick="selectedShape(this)">
+            </td>
+            <td id='stage'></td>
+            <td><img id="comp_rockImg" src="images/rock.png" alt="crock" width="100px">
+                <img id="comp_paperImg" src="images/paper.png" alt="cpaper" width="100px">
+                <img id="comp_scissorsImg" src="images/scissors.png" alt="cscissors" width="120px"></td>            
+        </tr>
+        <tr>
+            <td id='userScore'>#Game win: 0</td>
+            <td></td>
+            <td id='compScore'>#Game win: 0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id='startButton' onclick="startGame()" disabled = true>Start</button>
+                <button id='resetButton' onclick="resetGame()" disabled = true>Reset</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+    <!-- import external JavaScript file -->
+    <script src="script.js"></script>   
+</body>
+</html>
